@@ -3,6 +3,7 @@ Table of Contents
 
 * [Temporal Graph Learning](#temporal-graph-learning)
   * [Temporal Heterogeneous Information Network Embedding[IJCAI'21]](#temporal-heterogeneous-information-network-embeddingijcai21)
+  * [DySAT: Deep Neural Representation Learning on Dynamic Graphs via Self\-Attention Networks[WSDM'20]](#dysat-deep-neural-representation-learning-on-dynamic-graphs-via-self-attention-networkswsdm20)
   * [EvolveGCN Evolving Graph Convolutional Networks for Dynamic Graphs[AAAI'20]](#evolvegcn-evolving-graph-convolutional-networks-for-dynamic-graphsaaai20)
   * [Temporal\-Aware Graph Neural Network for Credit Risk Prediction[SDM'21]](#temporal-aware-graph-neural-network-for-credit-risk-predictionsdm21)
   * [T\-GCN: A Temporal Graph Convolutional Network for Traffic Prediction[TITS'17]](#t-gcn-a-temporal-graph-convolutional-network-for-traffic-predictiontits17)
@@ -30,6 +31,10 @@ Table of Contents
   * [Contrastive and Generative Graph Convolutional Networks for Graph\-based Semi\-Supervised Learning[AAAI'21]](#contrastive-and-generative-graph-convolutional-networks-for-graph-based-semi-supervised-learningaaai21)
   * [Spatio\-Temporal Graph Contrastive Learning](#spatio-temporal-graph-contrastive-learning)
   * [TCL: Transformer\-based Dynamic Graph Modelling via Contrastive Learning](#tcl-transformer-based-dynamic-graph-modelling-via-contrastive-learning)
+  * [Contrastive Learning for Sequential Recommendation[SIGIR'21]](#contrastive-learning-for-sequential-recommendationsigir21)
+  * [Contrastive Learning for Representation Degeneration Problem in Sequential Recommendation[WSDM'22]](#contrastive-learning-for-representation-degeneration-problem-in-sequential-recommendationwsdm22)
+  * [Improving Sequential Recommendation Consistency with Self\-Supervised Imitation[IJCAI'21]](#improving-sequential-recommendation-consistency-with-self-supervised-imitationijcai21)
+  * [Intent Contrastive Learning for Sequential Recommendation[WWW'22]](#intent-contrastive-learning-for-sequential-recommendationwww22)
 
 
 ## Temporal Graph Learning

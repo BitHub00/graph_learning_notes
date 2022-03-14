@@ -1,3 +1,6 @@
+Table of Contents
+=================
+
 * [Temporal Graph Learning](#temporal-graph-learning)
   * [Temporal Heterogeneous Information Network Embedding[IJCAI'21]](#temporal-heterogeneous-information-network-embeddingijcai21)
   * [EvolveGCN Evolving Graph Convolutional Networks for Dynamic Graphs[AAAI'20]](#evolvegcn-evolving-graph-convolutional-networks-for-dynamic-graphsaaai20)
@@ -29,7 +32,6 @@
   * [TCL: Transformer\-based Dynamic Graph Modelling via Contrastive Learning](#tcl-transformer-based-dynamic-graph-modelling-via-contrastive-learning)
 
 
-
 ## Temporal Graph Learning
 
 动态图学习相关论文，对每篇读过的论文给出基本介绍
@@ -40,6 +42,13 @@
 * 摘要：对于异构信息（顶点和边），论文使用基于元路径的随机游走来处理。元路径能够描述起始顶点和终止顶点之间的复杂关系，它可以经过任意类型的顶点和边。对于动态信息，使用Hawkes过程来建模过去事件对当前事件的影响，以attention机制来区分每个事件影响的重要程度。
 * 链接：https://www.ijcai.org/proceedings/2021/203
 * 是否有开源代码：https://github.com/S-rz/THINE
+
+### DySAT: Deep Neural Representation Learning on Dynamic Graphs via Self-Attention Networks[WSDM'20]
+
+* 标签：
+* 摘要：
+* 链接：https://dl.acm.org/doi/10.1145/3336191.3371845
+* 是否有开源代码：https://github.com/FeiGSSS/DySAT_pytorch
 
 ### EvolveGCN Evolving Graph Convolutional Networks for Dynamic Graphs[AAAI'20]
 
@@ -153,8 +162,11 @@
 
 ### Anomaly Detection in Dynamic Graphs via Transformer[TKDE'21]
 
-* 标签：
-* 摘要：论文提出了TADDY方法，将Transformer应用于动态图的异常边检测问题。TADDY分为四个部分，第一部分为以边为中心提取子图，不同于StrGNN采用h-hop的形式，TADDY通过graph diffusion如PPR的形式为图中顶点计算connectivity，取目标边的头尾顶点中connectivity值top-k的顶点来构造子图。第二部分为三个顶点编码方案，为了解决动态图中特征缺失的问题。
+* 标签：动态图学习
+* 摘要：论文提出了TADDY方法，将Transformer应用于动态图的异常边检测问题。TADDY分为四个部分，第一部分为以边为中心提取子图，不同于StrGNN采用h-hop的形式，TADDY通过graph diffusion如PPR的形式为图中顶点计算connectivity，取目标边的头尾顶点中connectivity值top-k的顶点来构造子图。第二部分为子图中的顶点进行编码：diffusion encoding取connectivity值排序后的顺序来编码；distance encoding取顶点到目标边头尾顶点的最短距离来编码；temporal encoding取目标边时间戳与当前快照时间戳差值来编码。第三部分为动态Transformer，将上一步的编码作为特征输入，输出的子图中顶点embedding通过pooling得到目标边的embedding。最后一部分将边的embedding转换为对应的异常分数。
+
+<a href="https://imgtu.com/i/H5TBNQ"><img src="https://s4.ax1x.com/2022/02/17/H5TBNQ.png" alt="H5TBNQ.png" border="0" /></a>
+
 * 链接：https://shiruipan.github.io/publication/tkde-liu-21/
 * 是否有开源代码：https://github.com/yuetan031/TADDY_pytorch
 
@@ -208,7 +220,7 @@
 
 * 链接：https://www.ijcai.org/proceedings/2021/473
 
-* 是否有开源代码：无
+* 是否有开源代码：https://github.com/hzhao98/GDCL
 
 ### Self-supervised Heterogeneous Graph Neural Network with Co-contrastive Learning[KDD'21]
 
@@ -354,3 +366,46 @@
 * 摘要：TCL的目标是利用历史信息预测t时刻用户是否会与物品产生交互，使用动态依赖-交互图作为图的呈现，各自得到用户和物品的k最短距离子图后，通过BFS转化为序列后输入定制的Transformer中，得到各自的特征表示。在构建正负样本时，用户已交互过的物品作为正样本，其余未交互过的物品作为负样本
 * 链接：https://arxiv.org/abs/2105.07944
 * 有无开源代码：无
+
+### Contrastive Learning for Sequential Recommendation[SIGIR'21]
+
+* 标签：序列推荐
+* 摘要：论文提出了三种序列的数据增强策略，分别为：裁剪：取原序列的一段连续子序列；遮盖：随机遮盖序列中部分元素；乱序：将原序列随机乱序，对同一序列进行两次数据增强，得到两条增强序列，在一个batch中，同一序列的两天增强序列为正样本，剩余来自不同序列的增强序列为负样本。
+
+<a href="https://imgtu.com/i/b4a3lD"><img src="https://s1.ax1x.com/2022/03/10/b4a3lD.png" alt="b4a3lD.png" border="0" /></a>
+
+<a href="https://imgtu.com/i/b4asXQ"><img src="https://s1.ax1x.com/2022/03/10/b4asXQ.png" alt="b4asXQ.png" border="0" /></a>
+
+* 链接：
+* 是否有开源代码：
+
+### Contrastive Learning for Representation Degeneration Problem in Sequential Recommendation[WSDM'22]
+
+* 标签：序列推荐
+* 摘要：无监督增强：论文从模型层面进行数据增强，embedding层与encoder层通过不同的dropout产生增强样本；有监督采样：具有相同目标商品的序列作为正样本，同一Batch内其余序列作为负样本
+* 链接：
+* 是否有开源代码：
+
+### Improving Sequential Recommendation Consistency with Self-Supervised Imitation[IJCAI'21]
+
+* 标签：预训练
+
+* 摘要：采用教师-学生模型的知识蒸馏方式，对比学习体现在教师模型的三个预训练任务：时序性：将原序列随机乱序；用户兴趣一致性：将序列部分商品随机替换成其他商品；全局一致性：取子序列与整个序列做局部-全局对比。
+
+  <a href="https://imgtu.com/i/b4d9nH"><img src="https://s1.ax1x.com/2022/03/10/b4d9nH.png" alt="b4d9nH.png" border="0" /></a>
+
+* 链接：
+
+* 是否有开源代码：
+
+### Intent Contrastive Learning for Sequential Recommendation[WWW'22]
+
+* 标签：序列推荐
+
+* 摘要：将序列与其中的隐变量-用户偏好做对比学习，序列增强是可选项，即可以通过原序列或增强后的序列来做对比学习，用户偏好的表示通过聚类形成的簇中心得到，同一簇内为正样本，不同簇内为负样本。
+
+  <a href="https://imgtu.com/i/b4dD4x"><img src="https://s1.ax1x.com/2022/03/10/b4dD4x.png" alt="b4dD4x.png" border="0" /></a>
+
+* 链接：
+
+* 是否有开源代码：

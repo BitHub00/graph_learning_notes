@@ -7,6 +7,8 @@ Table of Contents
   * [EvolveGCN Evolving Graph Convolutional Networks for Dynamic Graphs[AAAI'20]](#evolvegcn-evolving-graph-convolutional-networks-for-dynamic-graphsaaai20)
   * [Temporal\-Aware Graph Neural Network for Credit Risk Prediction[SDM'21]](#temporal-aware-graph-neural-network-for-credit-risk-predictionsdm21)
   * [T\-GCN: A Temporal Graph Convolutional Network for Traffic Prediction[TITS'17]](#t-gcn-a-temporal-graph-convolutional-network-for-traffic-predictiontits17)
+  * [Characterizing and Forecasting User Engagement with In\-app Action Graph: A Case Study of Snapchat[KDD'19]](#characterizing-and-forecasting-user-engagement-with-in-app-action-graph-a-case-study-of-snapchatkdd19)
+  * [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN[ECML\-PKDD'20]](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnnecml-pkdd20)
 * [Heterogeneous Graph Learning](#heterogeneous-graph-learning)
   * [Heterogeneous Graph Attention Network[WWW'19]](#heterogeneous-graph-attention-networkwww19)
   * [Are we really making much progress? Revisiting, benchmarking, and refining heterogeneous graph neural networks[KDD'21]](#are-we-really-making-much-progress-revisiting-benchmarking-and-refining-heterogeneous-graph-neural-networkskdd21)
@@ -16,7 +18,6 @@ Table of Contents
   * [Heterogeneous Graph Neural Networks for Malicious Account Detection[CIKM'18]](#heterogeneous-graph-neural-networks-for-malicious-account-detectioncikm18)
   * [Decoupling Representation Learning and Classification for GNN\-based Anomaly Detection[SIGIR'21]](#decoupling-representation-learning-and-classification-for-gnn-based-anomaly-detectionsigir21)
   * [AddGraph: Anomaly Detection in Dynamic Graph Using Attention\-based Temporal GCN[IJCAI'19]](#addgraph-anomaly-detection-in-dynamic-graph-using-attention-based-temporal-gcnijcai19)
-  * [Characterizing and Forecasting User Engagement with In\-app Action Graph: A Case Study of Snapchat[KDD'19]](#characterizing-and-forecasting-user-engagement-with-in-app-action-graph-a-case-study-of-snapchatkdd19)
   * [Structural Temporal Graph Neural Networks for Anomaly Detection in Dynamic Graphs[CIKM'20]](#structural-temporal-graph-neural-networks-for-anomaly-detection-in-dynamic-graphscikm20)
   * [Anomaly Detection in Dynamic Graphs via Transformer[TKDE'21]](#anomaly-detection-in-dynamic-graphs-via-transformertkde21)
 * [Graph Neural Networks](#graph-neural-networks)
@@ -26,12 +27,16 @@ Table of Contents
   * [Contrastive Learning for Representation Degeneration Problem in Sequential Recommendation[WSDM'22]](#contrastive-learning-for-representation-degeneration-problem-in-sequential-recommendationwsdm22)
   * [Improving Sequential Recommendation Consistency with Self\-Supervised Imitation[IJCAI'21]](#improving-sequential-recommendation-consistency-with-self-supervised-imitationijcai21)
   * [Intent Contrastive Learning for Sequential Recommendation[WWW'22]](#intent-contrastive-learning-for-sequential-recommendationwww22)
+  * [Sequential Recommendation with Multiple Contrast Signals[TOIS'22]](#sequential-recommendation-with-multiple-contrast-signalstois22)
+  * [Contrastive Self\-supervised Sequential Recommendation with Robust Augmentation[arxiv'21]](#contrastive-self-supervised-sequential-recommendation-with-robust-augmentationarxiv21)
+  * [Augmenting Sequential Recommendation with Pseudo\-Prior Items via Reversely Pre\-training Transformer[SIGIR'21]](#augmenting-sequential-recommendation-with-pseudo-prior-items-via-reversely-pre-training-transformersigir21)
+  * [Sequential Recommendation with Bidirectional Chronological Augmentation of Transformer](#sequential-recommendation-with-bidirectional-chronological-augmentation-of-transformer)
+  * [self\-supervised learning for sequential recommendation with model augmentation](#self-supervised-learning-for-sequential-recommendation-with-model-augmentation)
 * [Graph Self\-Supervised Learning](#graph-self-supervised-learning)
   * [Self\-supervised Graph Learning for Recommendation[SIGIR'21]](#self-supervised-graph-learning-for-recommendationsigir21)
   * [Self\-supervised Representation Learning on Dynamic Graphs[CIKM'21]](#self-supervised-representation-learning-on-dynamic-graphscikm21)
   * [Multi\-View Self\-Supervised Heterogeneous Graph Embedding[ECML\-PKDD'21]](#multi-view-self-supervised-heterogeneous-graph-embeddingecml-pkdd21)
   * [Graph Debiased Contrastive Learning with Joint Representation Clustering[IJCAI'21]](#graph-debiased-contrastive-learning-with-joint-representation-clusteringijcai21)
-  * [Self\-supervised Heterogeneous Graph Neural Network with Co\-contrastive Learning[KDD'21]](#self-supervised-heterogeneous-graph-neural-network-with-co-contrastive-learningkdd21)
   * [GCC\-\-Graph Contrastive Coding for Graph Neural Network Pre\-Training[KDD'20]](#gcc--graph-contrastive-coding-for-graph-neural-network-pre-trainingkdd20)
   * [GCCAD: Graph Contrastive Coding for Anomaly Detection](#gccad-graph-contrastive-coding-for-anomaly-detection)
   * [Deep Graph Infomax[ICLR'19]](#deep-graph-infomaxiclr19)
@@ -44,6 +49,7 @@ Table of Contents
   * [TCL: Transformer\-based Dynamic Graph Modelling via Contrastive Learning](#tcl-transformer-based-dynamic-graph-modelling-via-contrastive-learning)
   * [Structure\-Enhanced Heterogeneous Graph Contrastive Learning](#structure-enhanced-heterogeneous-graph-contrastive-learning)
   * [Contrastive Pre\-Training of GNNs on Heterogeneous Graphs[CIKM'21]](#contrastive-pre-training-of-gnns-on-heterogeneous-graphscikm21)
+  * [Self\-supervised Heterogeneous Graph Neural Network with Co\-contrastive Learning[KDD'21]](#self-supervised-heterogeneous-graph-neural-network-with-co-contrastive-learningkdd21)
 
 ## Temporal Graph Learning
 
@@ -102,6 +108,33 @@ Table of Contents
 * 链接：https://ieeexplore.ieee.org/document/8809901
 
 * 是否有开源代码：https://github.com/lehaifeng/T-GCN/tree/master/T-GCN/T-GCN-PyTorch
+
+### Characterizing and Forecasting User Engagement with In-app Action Graph: A Case Study of Snapchat[KDD'19]
+
+* 标签：动态图学习
+
+* 摘要：在建模动态信息时，论文将GCN与LSTM相结合，先通过GCN为每个时刻的快照图生成embedding，所有时刻的快照图embedding就形成了一条序列，再将这条序列输入LSTM中，取最后一层的隐层输出为最终的特征表示。
+
+  <a href="https://imgtu.com/i/HR8DW4"><img src="https://s4.ax1x.com/2022/02/15/HR8DW4.png" alt="HR8DW4.png" border="0" /></a>
+
+* 链接：https://dl.acm.org/doi/10.1145/3292500.3330750
+
+* 是否有开源代码：https://github.com/INK-USC/temporal-gcn-lstm
+
+### Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN[ECML-PKDD'20]
+
+* 标签：
+
+* 摘要：论文提出的DyHATR是一个动态异构图的框架。在每个快照图上，通过两个层面的attention得到顶点的特征表示：顶点层面attention在各异构边形成的子图中，通过attention聚合邻域信息，边层面attention再将各异构边聚合的信息通过attention加权聚合得到结果。将顶点在各时刻下的特征表示合起来看作一条序列，通过RNN+self-attention的形式在时序上使用attention加权聚合各时刻的信息，得到最终的顶点表示用于下游任务。
+
+<div align="center">
+  <a href="https://imgtu.com/i/L2ZO2T"><img src="https://s1.ax1x.com/2022/04/22/L2ZO2T.png" alt="L2ZO2T.png" border="0" /></a>
+</div>
+
+
+* 链接：https://link.springer.com/chapter/10.1007/978-3-030-67658-2_17
+
+* 是否有开源代码：https://github.com/skx300/DyHATR
 
 ## Heterogeneous Graph Learning
 
@@ -218,18 +251,6 @@ Table of Contents
 * 链接：https://www.ijcai.org/proceedings/2019/614
 * 是否有开源代码：https://github.com/Ljiajie/Addgraph
 
-### Characterizing and Forecasting User Engagement with In-app Action Graph: A Case Study of Snapchat[KDD'19]
-
-* 标签：动态图学习
-
-* 摘要：在建模动态信息时，论文将GCN与LSTM相结合，先通过GCN为每个时刻的快照图生成embedding，所有时刻的快照图embedding就形成了一条序列，再将这条序列输入LSTM中，取最后一层的隐层输出为最终的特征表示。
-
-  <a href="https://imgtu.com/i/HR8DW4"><img src="https://s4.ax1x.com/2022/02/15/HR8DW4.png" alt="HR8DW4.png" border="0" /></a>
-
-* 链接：https://dl.acm.org/doi/10.1145/3292500.3330750
-
-* 是否有开源代码：https://github.com/INK-USC/temporal-gcn-lstm
-
 ### Structural Temporal Graph Neural Networks for Anomaly Detection in Dynamic Graphs[CIKM'20]
 
 * 标签：动态图学习
@@ -278,7 +299,7 @@ Table of Contents
 ### Contrastive Learning for Sequential Recommendation[SIGIR'21]
 
 * 标签：序列推荐
-* 摘要：论文提出了三种序列的数据增强策略，分别为：裁剪：取原序列的一段连续子序列；遮盖：随机遮盖序列中部分元素；乱序：将原序列随机乱序，对同一序列进行两次数据增强，得到两条增强序列，在一个batch中，同一序列的两天增强序列为正样本，剩余来自不同序列的增强序列为负样本。
+* 摘要：论文提出了三种序列的数据增强策略，分别为：裁剪：取原序列的一段连续子序列；遮盖：随机遮盖序列中部分元素；乱序：将原序列随机乱序，对同一序列进行两次数据增强，得到两条增强序列，在一个batch中，同一序列的两条增强序列为正样本，剩余来自不同序列的增强序列为负样本。
 
 <a href="https://imgtu.com/i/b4a3lD"><img src="https://s1.ax1x.com/2022/03/10/b4a3lD.png" alt="b4a3lD.png" border="0" /></a>
 
@@ -290,7 +311,7 @@ Table of Contents
 ### Contrastive Learning for Representation Degeneration Problem in Sequential Recommendation[WSDM'22]
 
 * 标签：序列推荐
-* 摘要：无监督增强：论文从模型层面进行数据增强，embedding层与encoder层通过不同的dropout产生增强样本；有监督采样：具有相同目标商品的序列作为正样本，同一Batch内其余序列作为负样本
+* 摘要：无监督增强：论文从模型层面进行数据增强，embedding层与encoder层通过不同的dropout产生增强样本；有监督采样：具有相同推荐商品的序列作为正样本，同一Batch内其余序列作为负样本
 * 链接：https://arxiv.org/abs/2110.05730
 * 是否有开源代码：https://github.com/RuihongQiu/DuoRec
 
@@ -318,7 +339,77 @@ Table of Contents
 
 * 是否有开源代码：https://github.com/YChen1993/ICLRec
 
+### Sequential Recommendation with Multiple Contrast Signals[TOIS'22]
 
+* 标签：
+
+* 摘要：论文提出的ContraRec由两部分对比任务组成。传统的序列推荐任务通过输入的历史交互序列建模用户的兴趣偏好，从而预测下一时刻用户可能喜欢的物品，推荐物品的排序要比其他候选物品更高。论文将这一任务也看作是对比学习的一种形式：历史序列与推荐物品为正样本，与其他候选物品为负样本，BPR损失函数也可以很容易地转化为InfoNCE损失函数。除此之外，传统的序列对比学习作为一个另一个对比任务，一条序列通过乱序和随机mask两种方式得到两条增强序列，同一条序列的增强序列自然互为正样本，而不同序列如果推荐的目标物品相同，也看做正样本，否则为负样本。
+
+<div align="center">
+  <a href="https://imgtu.com/i/LgOYb4"><img src="https://s1.ax1x.com/2022/04/22/LgOYb4.png" alt="LgOYb4.png" border="0" /></a>
+</div>
+
+
+* 链接：https://dl.acm.org/doi/abs/10.1145/3522673
+
+* 是否有开源代码：https://github.com/THUwangcy/ReChorus/tree/TOIS22
+
+### Contrastive Self-supervised Sequential Recommendation with Robust Augmentation[arxiv'21]
+
+* 标签：
+
+* 摘要：论文认为传统的序列对比学习中的增强策略如reorder、mask和crop对短序列不适用，它们破坏了序列内元素的相关性，或者减少了序列的元素个数加剧了冷启动的问题。本文的主要贡献是提出了两种新的增强策略：插入insert和替换substitute，前者是将相关物品j插入序列中物品i的前面，后者直接用j替换i。衡量物品相关性采用了基于物品的协同过滤和特征向量点乘，取两种方法归一化后的最大值为最终结果。
+
+<div align="center">
+  <a href="https://imgtu.com/i/L5YqVH"><img src="https://s1.ax1x.com/2022/04/24/L5YqVH.png" alt="L5YqVH.png" border="0"></a>
+  <a href="https://imgtu.com/i/L5YLad"><img src="https://s1.ax1x.com/2022/04/24/L5YLad.png" alt="L5YLad.png" border="0"></a>
+</div>
+
+
+* 链接：https://arxiv.org/abs/2108.06479
+
+* 是否有开源代码：https://github.com/YChen1993/CoSeRec
+
+### Augmenting Sequential Recommendation with Pseudo-Prior Items via Reversely Pre-training Transformer[SIGIR'21]
+
+* 标签：
+
+* 摘要：论文专门研究短序列上的序列推荐任务及对比学习的应用，提出了ASReP方法。首先将Transformer在输入的序列上逆序进行预训练，预训练后的模型将生成若干伪商品放置于短序列头部进行拼接，从而增加序列长度。最后再正序输入Transformer中进行传统的目标商品预测任务。
+
+<div align="center">
+  <a href="https://imgtu.com/i/L23aTS"><img src="https://s1.ax1x.com/2022/04/22/L23aTS.png" alt="L23aTS.png" border="0" /></a>
+</div>
+
+
+* 链接：https://dl.acm.org/doi/abs/10.1145/3404835.3463036
+* 是否有开源代码：https://github.com/DyGRec/ASReP
+
+### Sequential Recommendation with Bidirectional Chronological Augmentation of Transformer
+
+* 标签：
+
+* 摘要：论文在ASReP的基础上进行改进，改动的是输入序列逆序来预训练Transformer的部分。预训练任务是传统的目标商品预测任务，只是逆序情况下预测的目标商品为原序列中第一个商品前面的商品。原序列中商品的下标为[1,n]，新生成的序列中商品的下标为[0,n]，它会继续输入相同的Transformer中，取下标[0,n-1]为历史序列，n为目标商品来进行正序的预训练。在对Transformer预训练后，后续步骤和ASReP一致，对短序列增强并预测目标商品。
+
+<div align="center">
+  <a href="https://imgtu.com/i/LhocQK"><img src="https://s1.ax1x.com/2022/04/24/LhocQK.png" alt="LhocQK.png" border="0" /></a>
+</div>
+
+
+* 链接：https://arxiv.org/abs/2112.06460v1
+
+* 是否有开源代码：https://github.com/juyongjiang/BiCAT
+
+### self-supervised learning for sequential recommendation with model augmentation
+
+* 标签：
+
+* 摘要：这是一篇被ICLR22拒稿的论文。论文提出了三种在模型层面的数据增强策略：神经元mask、网络层drop和Encoder互补。神经元mask是在Transformer Encoder中的前馈神经网络FFN部分随机mask一些神经元，网络层drop就是在Encoder之后叠加K层FFN并每次随机drop其中的M层，Encoder互补就是在下一个点击商品任务上预训练一个Encoder，它生成的embedding与原Encoder相加作为一个增强样本。
+
+  <a href="https://imgtu.com/i/Lb7MqA"><img src="https://s1.ax1x.com/2022/04/27/Lb7MqA.png" alt="Lb7MqA.png" border="0" /></a>
+
+* 链接：https://openreview.net/forum?id=4YOOO4ZNKM
+
+* 是否有开源代码：无
 
 ## Graph Self-Supervised Learning
 
@@ -371,18 +462,6 @@ Table of Contents
 * 链接：https://www.ijcai.org/proceedings/2021/473
 
 * 是否有开源代码：https://github.com/hzhao98/GDCL
-
-### Self-supervised Heterogeneous Graph Neural Network with Co-contrastive Learning[KDD'21]
-
-* 标签：元路径、attention、异构图
-
-* 摘要：HeCo通过一个异构图的元路径和网络模式两个角度来学习顶点的embedding。首先将异构顶点的特征先投影到同一个特征空间中，得到顶点的初步embedding，接下来通过node-level和type-level的attention来对邻域内的异构顶点信息进行聚合，得到网络模式角度的embedding；先通过GCN将元路径上顶点的embedding聚合成元路径的embedding，再通过semantic-level的attention来得到元路径角度的embedding。得到两个角度的embedding后，HeCo将它们通过一个MLP来进行接下来的对比学习。HeCo的正负样本选取方式与其他图对比学习不同，它认为有多条元路径相连的两个顶点构成一对正样本，而元路径数量少于设定阈值的两个顶点视为一对负样本。
-
-  <a href="https://imgtu.com/i/oP7WnS"><img src="https://z3.ax1x.com/2021/11/24/oP7WnS.png" alt="oP7WnS.png" border="0" /></a>
-
-* 链接：https://arxiv.org/abs/2105.09111
-
-* 是否有开源代码：https://github.com/liun-online/HeCo
 
 ### GCC--Graph Contrastive Coding for Graph Neural Network Pre-Training[KDD'20]
 
@@ -547,3 +626,19 @@ Table of Contents
 * 链接：https://yuanfulu.github.io/publication/CIKM-CPT.pdf
 
 * 是否有开源代码：无
+
+### Self-supervised Heterogeneous Graph Neural Network with Co-contrastive Learning[KDD'21]
+
+* 标签：元路径、attention、异构图
+
+* 摘要：HeCo通过一个异构图的元路径和网络结构两个角度来学习顶点的embedding。网络结构视角通过node-level和type-level两层attention，前者在特定的顶点类型下聚合邻域信息，后者再对不同的定点类型的结果进行聚合；元路径视角通过元路径定义一个顶点的邻域，在每种元路径下通过GCN聚合邻域信息，再对不同元路径的结果通过attention进行聚合。论文的对比方式是，它认为有多条元路径相连的两个顶点构成一对正样本，而元路径数量少于设定阈值的两个顶点视为一对负样本。同时，原样本的表示取的是网络结构视角，而正负样本的表示取的是元路径视角。
+
+<div align="center">
+  <a href="https://imgtu.com/i/LbbIgO"><img src="https://s1.ax1x.com/2022/04/27/LbbIgO.png" alt="LbbIgO.png" border="0" /></a>
+  <a href="https://imgtu.com/i/oP7WnS"><img src="https://z3.ax1x.com/2021/11/24/oP7WnS.png" alt="oP7WnS.png" border="0" /></a>
+</div>
+
+
+* 链接：https://arxiv.org/abs/2105.09111
+
+* 是否有开源代码：https://github.com/liun-online/HeCo
